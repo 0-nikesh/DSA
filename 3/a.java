@@ -31,11 +31,11 @@ public class a {
 
         if (size % 2 == 0) {
             // if number even ho bhane duita number line 
-            int middleIndex1 = size / 2 - 1;
+            int middleIndex1 = (size / 2) - 1;
             int middleIndex2 = size / 2;
             return (scores.get(middleIndex1) + scores.get(middleIndex2)) / 2.0;
         } else {
-            // if not middle number median 
+            // if not middle number is median 
             return scores.get(size / 2);
         }
     }
