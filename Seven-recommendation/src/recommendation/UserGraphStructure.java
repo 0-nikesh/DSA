@@ -3,15 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package recommendation;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
 
 public class UserGraphStructure {
     private Map<Integer, List<Integer>> adjacencyList; // Maping user ID to their connections
@@ -88,9 +87,7 @@ public class UserGraphStructure {
     }
     
     public static void initiateGraph( UserGraphStructure socialGraph){
-//            UserGraphStructure socialGraph = new UserGraphStructure();
-        // Add users
-       // Fetching users from the Databas
+
         Connection conn = dbConnection.dbconnect();
 
 
