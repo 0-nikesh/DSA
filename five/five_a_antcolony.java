@@ -173,7 +173,7 @@ public class five_a_antcolony {
 
         // Create AntColony object and solve TSP
         AntColony colony = new AntColony(distanceMatrix, numAnts, evaporationRate, alpha, beta);
-        colony.solve(500); // Solve TSP with 1000 iterations
+        colony.solve(500); // Solve TSP with 500 iterations
 
         // Retrieve and print the best tour and its length
         int[] bestTour = colony.getBestTour();
