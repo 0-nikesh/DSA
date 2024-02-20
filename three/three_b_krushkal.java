@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 class Edge implements Comparable<Edge> {
     int src, dest, weight; // source, destination, weight of the edge
 
-    public Edge(int src, int dest, int weight) { //cinstructor
+    public Edge(int src, int dest, int weight) { //constructor
         this.src = src;
         this.dest = dest;
         this.weight = weight;
