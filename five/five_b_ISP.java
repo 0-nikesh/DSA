@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class five_b{
+public class five_b_ISP{
     // method to find nodes that is targetted
     public static List<Integer> Targetednode(int[][] edges, int startNode, int targetNode ) { 
         Map<Integer, List<Integer>> graph = new HashMap<>(); //creating a graph to represent relationships between nodes 

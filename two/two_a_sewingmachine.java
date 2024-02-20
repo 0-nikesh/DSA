@@ -29,6 +29,6 @@ public class two_a_sewingmachine {
 
     public static void main(String[] args) {
         int[] sewingMachines = { 1,0,5}; //
-        System.out.println(minMovesToEqualizeDresses(sewingMachines)); // Output: 3
+        System.out.println(minMovesToEqualizeDresses(sewingMachines)); 
     }
 }

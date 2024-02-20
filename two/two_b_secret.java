@@ -3,7 +3,7 @@ package two;
 import java.util.ArrayList;
 import java.util.List;
 
-public class two_b {
+public class two_b_secret {
     
 
     public static List<Integer> peopleKnowingSecret(int n, int[][] intervals, int firstOne) { //method  to find the list of people knowing the secret 
