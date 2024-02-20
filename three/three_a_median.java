@@ -55,3 +55,5 @@ public class three_a_median {
         System.out.println("Median Score 2: " + tracker.getMedianScore());
     }
 }
+
+
