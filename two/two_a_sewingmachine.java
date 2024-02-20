@@ -1,42 +1,34 @@
 package two;
 public class two_a_sewingmachine {
-    
 
-    public static int minMove(int[] machines) {
-        int totLuga = 0;
-        int noOfMachine = machines.length; //machine ko length calculate garna
+    public static int minMovesToEqualizeDresses(int[] sewingMachines) {
+        int totalDresses = 0; //variable to store the total dress
+        int numMachines = sewingMachines.length; //get bumber of sewing machine
 
-        // luga ko no. calculate garna 
-        for (int luga : machines) {
-            totLuga += luga;
+        // Calculate the total number of dresses
+        for (int i : sewingMachines) {
+            totalDresses = totalDresses+ i;
         }
 
-        // equally distribute hunxa ki nai check garna 
-        if (totLuga % noOfMachine != 0) {
-            return -1; //hunna bhane -1
+        // Check if the total dresses can be evenly distributed among the machines
+        if (totalDresses % numMachines != 0) {
+            return -1; // Cannot equalize if the total dresses cannot be evenly distributed
         }
 
-        // auta machine ma kati ota luga atxa check garna 
-        int lugaPerMachine = totLuga / noOfMachine;
+        int averageDressesPerMachine = totalDresses / numMachines;
+        int moves = 0;
+        int cumulativeSum = 0;
 
-        
-        int moves = 0; //inital ma 0 paxi badhxa
-        for (int i = 0; i < noOfMachine - 1; i++) {
-            int diff = lugaPerMachine - machines[i];
-            if (diff > 0) {
-                int shift = Math.min(diff, machines[i + 1]);//no. of luga update garne after shift 
-                machines[i] += shift;
-                machines[i + 1] -= shift;
-                //total num of move update garney 
-                moves += shift;
-            }
+        for (int dresses : sewingMachines) {
+            cumulativeSum = cumulativeSum + (dresses - averageDressesPerMachine); //
+            moves = Math.max(moves, Math.abs(cumulativeSum));//abs does the work of magnitude and make it positive 
         }
 
         return moves;
     }
+
     public static void main(String[] args) {
-        int[] input = { 1, 0, 5 };
-        System.out.println(minMove(input) + " is the kam number of move to shift luga");
+        int[] sewingMachines = { 1,0,5}; //
+        System.out.println(minMovesToEqualizeDresses(sewingMachines)); // Output: 3
     }
 }
-
